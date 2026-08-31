@@ -1,67 +1,66 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
-header {
-    background-color: #d9534f;
-    color: white;
-    padding: 1rem 2rem;
+/* Alinha a Logo à esquerda e a Imagem à direita */
+.topo-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Empurra um para cada ponta */
     align-items: center;
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: bold;
-}
-
-.container {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    margin-top: 1rem;
+    background-color: #ffffff;
+    padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.product-grid {
-    display: flex;
-    gap: 20px;
+.imagem-topo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover;
 }
 
-.card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
-    flex: 1;
+/* Estilo das Opções Clicáveis */
+.menu-container {
+    margin-top: 30px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input, textarea, button {
+details {
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 6px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+/* Cabeçalho da opção antes de clicar */
+summary {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 5px;
+    outline: none;
+}
+
+/* Conteúdo que aparece quando clica */
+.opcao-conteudo {
+    padding: 15px 10px 5px 10px;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
 }
 
 button {
-    background-color: #d9534f;
+    background-color: #28a745;
     color: white;
     border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #c9302c;
+    background-color: #218838;
 }
