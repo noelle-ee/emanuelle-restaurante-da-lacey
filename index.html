@@ -8,70 +8,50 @@
 </head>
 <body>
 
-    <header>
-        <div class="logo">Sabor & Arte</div>
-        <nav>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#carrinho">Carrinho (<span id="cart-count">0</span>)</a>
-            <a href="#entrega">Entrega</a>
-            <a href="#contato">Fale Conosco</a>
-            <a href="#login" class="btn-login">Login</a>
-        </nav>
+    <header class="topo-container">
+        <div class="logo">
+            <h1>Sabor & Arte</h1>
+        </div>
+        <div class="imagem-topo">
+            <img src="https://via.placeholder.com/150" alt="Prato principal">
+        </div>
     </header>
 
-    <section id="cardapio" class="container">
-        <h2>Nosso Cardápio</h2>
-        <div class="product-grid">
-            <div class="card">
-                <h3>Hambúrguer Artesanal</h3>
-                <p>Pão brioche, carne 180g e queijo cheddar.</p>
-                <span>R$ 32,00</span>
-                <button onclick="adicionarAoCarrinho('Hambúrguer Artesanal', 32)">Adicionar</button>
+    <main class="menu-container">
+        <h2>Cardápio e Informações</h2>
+
+        <details>
+            <summary>🍔 Lanches e Hambúrgueres</summary>
+
+            <div class="opcao-conteudo">
+                <p><strong>Hambúrguer Artesanal</strong> - R$ 32,00</p>
+                <p>Carne 180g, queijo e salada.</p>
+                <button>Adicionar ao Carrinho</button>
             </div>
-            <div class="card">
-                <h3>Pizza Margherita</h3>
-                <p>Molho artesanal, recheio de muçarela e manjericão.</p>
-                <span>R$ 45,00</span>
-                <button onclick="adicionarAoCarrinho('Pizza Margherita', 45)">Adicionar</button>
+
+        </details>
+
+        <details>
+            <summary>🍕 Pizzas</summary>
+
+            <div class="opcao-conteudo">
+                <p><strong>Pizza Margherita</strong> - R$ 45,00</p>
+                <p>Molho, muçarela e manjericão.</p>
+                <button>Adicionar ao Carrinho</button>
             </div>
-        </div>
-    </section>
 
-    <section id="carrinho" class="container">
-        <h2>Seu Carrinho</h2>
-        <ul id="lista-carrinho"></ul>
-        <p><strong>Total: R$ <span id="total-price">0.00</span></strong></p>
-    </section>
+        </details>
 
-    <section id="entrega" class="container">
-        <h2>Endereço de Entrega</h2>
-        <form>
-            <input type="text" placeholder="Rua e Número" required>
-            <input type="text" placeholder="Bairro" required>
-            <input type="text" placeholder="Ponto de Referência">
-            <button type="submit">Confirmar Endereço</button>
-        </form>
-    </section>
+        <details>
+            <summary>🥤 Bebidas</summary>
 
-    <section id="contato" class="container">
-        <h2>Fale Conosco</h2>
-        <form>
-            <input type="text" placeholder="Seu Nome" required>
-            <input type="email" placeholder="Seu E-mail" required>
-            <textarea placeholder="Sua Mensagem" rows="4" required></textarea>
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-    </section>
+            <div class="opcao-conteudo">
+                <p><strong>Suco Natural</strong> - R$ 10,00</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
 
-    <section id="login" class="container">
-        <h2>Área de Login</h2>
-        <form>
-            <input type="email" placeholder="E-mail" required>
-            <input type="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
-        </form>
-    </section>
+        </details>
+    </main>
 
-    <script src="script.js"></script>
 </body>
 </html>
