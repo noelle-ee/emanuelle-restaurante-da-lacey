@@ -3,38 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante Da Lacey</title>
+    <title>Restaurante da Lacey</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="topo-container">
-        <div class="logo">
-            <h1>Sabor & Arte</h1>
-        </div>
-        <div class="imagem-topo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRGe6TwiI1DfNcXXBRj7AfrdPRcurVFNQjFy52TUnz9tmL1Js3Y5WrsJU&s=10">
-        </div>
+    <header>
+        <h1>Restaurante da Lacey</h1>
+        <nav>
+            <a href="#home">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#login">Login</a>
+            <a href="#carrinho">Carrinho (<span id="cart-count">0</span>)</a>
+        </nav>
     </header>
 
-    <main class="menu-container">
-        <h2>Cardápio e Informações</h2>
+    <section id="home" class="hero">
+        <img src="sua-imagem.jpg" alt="Capa do Restaurante da Lacey" class="hero-img">
+        <div class="hero-text">
+            <h2>Bem-vindo ao Restaurante da Lacey</h2>
+            <p>O melhor sabor feito com carinho para você.</p>
+        </div>
+    </section>
 
-        <details>
-            <summary>🍔 Lanches e Hambúrgueres</summary>
-
-            <div class="opcao-conteudo">
-                <p><strong>Hambúrguer Artesanal</strong> - R$ 32,00</p>
-                <p>Carne 180g, queijo e salada.</p>
-                <button>Adicionar ao Carrinho</button>
+    <section id="cardapio" class="container">
+        <h2>Nosso Cardápio</h2>
+        <div class="menu-grid">
+            <div class="card">
+                <h3>Prato Especial</h3>
+                <p>Descrição do prato delicioso do restaurante.</p>
+                <span>R$ 35,00</span>
+                <button onclick="addToCart('Prato Especial', 35)">Adicionar ao Carrinho</button>
             </div>
+            <div class="card">
+                <h3>Sobremesa da Casa</h3>
+                <p>Uma sobremesa incrível para adoçar seu dia.</p>
+                <span>R$ 15,00</span>
+                <button onclick="addToCart('Sobremesa da Casa', 15)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
 
-        </details>
+    <section id="sobre" class="container">
+        <h2>Sobre Nós</h2>
+        <p>O Restaurante da Lacey nasceu com a missão de servir refeições inesquecíveis, combinando ingredientes frescos e um ambiente acolhedor.</p>
+    </section>
 
-        <details>
-            <summary>🍕 Pizzas</summary>
+    <section id="login" class="container">
+        <h2>Login</h2>
+        <form class="form-group">
+            <input type="email" placeholder="Seu e-mail" required>
+            <input type="password" placeholder="Sua senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
 
-            <div class="opcao-conteudo">
+    <section id="carrinho" class="container">
+        <h2>Seu Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total: R$ <span id="cart-total">0.00</span></strong></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>            <div class="opcao-conteudo">
                 <p><strong>Pizza Margherita</strong> - R$ 45,00</p>
                 <p>Molho, muçarela e manjericão.</p>
                 <button>Adicionar ao Carrinho</button>
