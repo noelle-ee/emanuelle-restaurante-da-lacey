@@ -1,24 +1,24 @@
-let carrinho = [];
+let cart = [];
 let total = 0;
 
-function adicionarAoCarrinho(nome, preco) {
-    carrinho.push({ nome, preco });
-    total += preco;
-    atualizarCarrinho();
+function addToCart(item, price) {
+    cart.push({ item, price });
+    total += price;
+    updateCartUI();
 }
 
-function atualizarCarrinho() {
-    const lista = document.getElementById('lista-carrinho');
-    const totalElemento = document.getElementById('total-price');
-    const contador = document.getElementById('cart-count');
+function updateCartUI() {
+    const cartList = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    const cartCount = document.getElementById('cart-count');
 
-    lista.innerHTML = '';
-    carrinho.forEach(item => {
+    cartList.innerHTML = '';
+    cart.forEach(entry => {
         const li = document.createElement('li');
-        li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
-        lista.appendChild(li);
+        li.textContent = `${entry.item} - R$ ${entry.price.toFixed(2)}`;
+        cartList.appendChild(li);
     });
 
-    totalElemento.textContent = total.toFixed(2);
-    contador.textContent = carrinho.length;
+    cartTotal.textContent = total.toFixed(2);
+    cartCount.textContent = cart.length;
 }
